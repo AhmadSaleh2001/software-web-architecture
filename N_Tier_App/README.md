@@ -4,8 +4,7 @@ This is a Express REST API project developed using NodeJs and MySql for demonstr
 
 ## Features
 
-Transfer Api to transfer amount from an account to another account
-add
+api for simulate e-commerce
 
 ## Technology Stack
 
