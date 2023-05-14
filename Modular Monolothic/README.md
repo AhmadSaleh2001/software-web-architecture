@@ -1,6 +1,8 @@
-# Modular Monolothic
+# Modular Monolothic Architecture
 
 separate application to some modules
+each module can be separate it into several layers
+so we can apply N-Tier on each Module in Modular Monolothic Architecture
 
 
 # Simple Demo Of Modular Monolothic Application Architecture
