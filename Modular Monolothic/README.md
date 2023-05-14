@@ -1,10 +1,7 @@
 # Modular Monolothic
 
-the system is divided into independent modules, which can be developed and tested separately, 
-but they are deployed together as a single monolithic application.
-difference between Modular Monolothic and N-Tier(Layers)
-that Each Module can be separate it into some layers
-so Modular Monolothic its more general we can assume it
+separate application to some modules
+
 
 # Simple Demo Of Modular Monolothic Application Architecture
 

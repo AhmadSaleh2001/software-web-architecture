@@ -1,3 +1,8 @@
+# N-Tier
+
+Meaning Specific Idea Divided into serveral Layers
+
+
 # Simple Demo Of N-Tier Application Architecture
 
 This is a Express REST API project developed using NodeJs and MySql for demonstrating the N-Tier Application
