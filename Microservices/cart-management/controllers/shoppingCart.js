@@ -12,7 +12,7 @@ let add = async (Req, Res) => {
 };
 let mydelete = async (Req, Res) => {
   try {
-    await user.destroy({
+    await shoppingCart.destroy({
       where: { id: Req.params.id },
     });
     Res.status(201).json({ Msg: "User Deleted Successfully !" });
@@ -21,7 +21,27 @@ let mydelete = async (Req, Res) => {
   }
 };
 
+let getCartUser = async (Req, Res) => {
+  let currCart = await shoppingCart.findAll({
+    where: { userId: Req.params.id },
+  });
+  Res.json({ currCart });
+};
+
+let deleteUserCart = async (Req, Res) => {
+  try {
+    await shoppingCart.destroy({
+      where: { userid: Req.params.id },
+    });
+    Res.status(201).json({ Msg: "User Cart Deleted Successfully !" });
+  } catch (err) {
+    Res.status(400).json({ Msg: err.message });
+  }
+};
+
 module.exports = {
   add,
   mydelete,
+  getCartUser,
+  deleteUserCart,
 };

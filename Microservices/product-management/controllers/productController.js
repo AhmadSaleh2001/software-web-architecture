@@ -18,8 +18,13 @@ let mydelete = async (Req, Res) => {
     Res.status(400).json({ Msg: err.message });
   }
 };
+let get = async (Req, Res) => {
+  const currProduct = await product.findByPk(Req.params.id);
+  Res.json({ currProduct });
+};
 
 module.exports = {
   add,
   mydelete,
+  get,
 };

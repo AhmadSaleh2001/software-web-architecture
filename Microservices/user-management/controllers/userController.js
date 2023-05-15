@@ -19,7 +19,13 @@ let mydelete = async (Req, Res) => {
   }
 };
 
+let getById = async (Req, Res) => {
+  let currUser = await user.findByPk(Req.params.id);
+  Res.json({ currUser });
+};
+
 module.exports = {
   add,
   mydelete,
+  getById,
 };

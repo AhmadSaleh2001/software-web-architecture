@@ -18,10 +18,10 @@ let add = async (Req, Res) => {
 };
 let mydelete = async (Req, Res) => {
   try {
-    await user.destroy({
+    await shoppingCart.destroy({
       where: { id: Req.params.id },
     });
-    Res.status(201).json({ Msg: "User Deleted Successfully !" });
+    Res.status(201).json({ Msg: "Cart Item Deleted Successfully !" });
   } catch (err) {
     Res.status(400).json({ Msg: err.message });
   }
