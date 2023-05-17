@@ -1,6 +1,6 @@
 const { user } = require("../models/user");
 
-let add = async (Req, Res) => {
+let create = async (Req, Res) => {
   try {
     await user.create({ ...Req.body });
     Res.status(201).json({ Msg: "User Created Successfully !" });
@@ -8,7 +8,7 @@ let add = async (Req, Res) => {
     Res.status(400).json({ Msg: err.message });
   }
 };
-let mydelete = async (Req, Res) => {
+let Delete = async (Req, Res) => {
   try {
     await user.destroy({
       where: { id: Req.params.id },
@@ -25,7 +25,7 @@ let getById = async (Req, Res) => {
 };
 
 module.exports = {
-  add,
-  mydelete,
+  create,
+  Delete,
   getById,
 };

@@ -3,7 +3,6 @@
 separate application down into set of small independent services that communicate
 with each other using light weight protocols such that HTTP or message queue
 
-
 # Simple Demo Of Microservice Application Architecture
 
 This is a Express REST API project developed using NodeJs and MySql for demonstrating the Microservice Application
@@ -11,6 +10,13 @@ This is a Express REST API project developed using NodeJs and MySql for demonstr
 ## Features
 
 api for simulate e-commerce
+
+## Main Services
+
+- **Product Service**: Responsible for managing the products available on the website. This includes features like adding, updating, and deleting products, as well as managing product categories and attributes.
+- **Order Service**: Responsible for creating and cancelling orders made by customers.
+- **Cart Service**: Responsible for managing the shopping cart and adding products to it.
+- **User Service**: Responsible for managing the customers.
 
 ## Technology Stack
 

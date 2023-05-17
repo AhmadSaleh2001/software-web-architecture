@@ -4,7 +4,6 @@ separate application to some modules
 each module can be separate it into several layers
 so we can apply N-Tier on each Module in Modular Monolothic Architecture
 
-
 # Simple Demo Of Modular Monolothic Application Architecture
 
 This is a Express REST API project developed using NodeJs and MySql for demonstrating the Modular-Monolothic Application
@@ -12,6 +11,13 @@ This is a Express REST API project developed using NodeJs and MySql for demonstr
 ## Features
 
 api for simulate e-commerce
+
+## Main Modules
+
+- **Product Module**: Responsible for managing the products available on the website. This includes features like adding, updating, and deleting products, as well as managing product categories and attributes.
+- **Order Module**: Responsible for creating and cancelling orders made by customers.
+- **Cart Module**: Responsible for managing the shopping cart and adding products to it.
+- **User Module**: Responsible for managing the customers.
 
 ## Technology Stack
 

@@ -2,7 +2,6 @@
 
 Meaning Specific Idea Divided into serveral Layers
 
-
 # Simple Demo Of N-Tier Application Architecture
 
 This is a Express REST API project developed using NodeJs and MySql for demonstrating the N-Tier Application
@@ -10,6 +9,13 @@ This is a Express REST API project developed using NodeJs and MySql for demonstr
 ## Features
 
 api for simulate e-commerce
+
+## Main Layers
+
+- **Product Layer**: Responsible for managing the products available on the website. This includes features like adding, updating, and deleting products, as well as managing product categories and attributes.
+- **Order Layer**: Responsible for creating and cancelling orders made by customers.
+- **Cart Layer**: Responsible for managing the shopping cart and adding products to it.
+- **Customer Layer**: Responsible for creating and deleting customers.
 
 ## Technology Stack
 

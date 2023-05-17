@@ -1,6 +1,6 @@
 const { shoppingCart } = require("../models/shoppingCart");
 let userServices = require("../services/user.services");
-let add = async (Req, Res) => {
+let create = async (Req, Res) => {
   try {
     await userServices.isExists(Req.body.userId);
     await shoppingCart.create({ ...Req.body });
@@ -8,22 +8,21 @@ let add = async (Req, Res) => {
       Msg: "product added to cart Created Successfully !",
     });
   } catch (err) {
-    console.log("herer");
     Res.status(400).json({ Msg: err.message });
   }
 };
-let mydelete = async (Req, Res) => {
+let Delete = async (Req, Res) => {
   try {
-    await user.destroy({
+    await shoppingCart.destroy({
       where: { id: Req.params.id },
     });
-    Res.status(201).json({ Msg: "User Deleted Successfully !" });
+    Res.status(201).json({ Msg: "Item Deleted Successfully !" });
   } catch (err) {
     Res.status(400).json({ Msg: err.message });
   }
 };
 
 module.exports = {
-  add,
-  mydelete,
+  create,
+  Delete,
 };

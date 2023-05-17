@@ -5,8 +5,9 @@ let userServices = require(path.resolve(
   "./services",
   "user.services.js"
 ));
-let add = async (Req, Res) => {
+let create = async (Req, Res) => {
   try {
+    // console.log(Req.body.userId);
     await userServices.isExists(Req.body.userId);
     await shoppingCart.create({ ...Req.body });
     Res.status(201).json({
@@ -16,7 +17,7 @@ let add = async (Req, Res) => {
     Res.status(400).json({ Msg: err.message });
   }
 };
-let mydelete = async (Req, Res) => {
+let Delete = async (Req, Res) => {
   try {
     await shoppingCart.destroy({
       where: { id: Req.params.id },
@@ -28,6 +29,6 @@ let mydelete = async (Req, Res) => {
 };
 
 module.exports = {
-  add,
-  mydelete,
+  create,
+  Delete,
 };

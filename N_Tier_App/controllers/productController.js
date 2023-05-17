@@ -1,6 +1,6 @@
 const { product } = require("../models/product");
 
-let add = async (Req, Res) => {
+let create = async (Req, Res) => {
   try {
     await product.create({ ...Req.body });
     Res.status(201).json({ Msg: "product Created Successfully !" });
@@ -8,7 +8,7 @@ let add = async (Req, Res) => {
     Res.status(400).json({ Msg: err.message });
   }
 };
-let mydelete = async (Req, Res) => {
+let Delete = async (Req, Res) => {
   try {
     await product.destroy({
       where: { id: Req.params.id },
@@ -20,6 +20,6 @@ let mydelete = async (Req, Res) => {
 };
 
 module.exports = {
-  add,
-  mydelete,
+  create,
+  Delete,
 };

@@ -1,6 +1,6 @@
 var path = require("path");
 const { shoppingCart } = require("../models/shoppingCart");
-let add = async (Req, Res) => {
+let create = async (Req, Res) => {
   try {
     await shoppingCart.create({ ...Req.body });
     Res.status(201).json({
@@ -10,12 +10,12 @@ let add = async (Req, Res) => {
     Res.status(400).json({ Msg: err.message });
   }
 };
-let mydelete = async (Req, Res) => {
+let Delete = async (Req, Res) => {
   try {
     await shoppingCart.destroy({
       where: { id: Req.params.id },
     });
-    Res.status(201).json({ Msg: "User Deleted Successfully !" });
+    Res.status(201).json({ Msg: "Cart Item Deleted Successfully !" });
   } catch (err) {
     Res.status(400).json({ Msg: err.message });
   }
@@ -40,8 +40,8 @@ let deleteUserCart = async (Req, Res) => {
 };
 
 module.exports = {
-  add,
-  mydelete,
+  create,
+  Delete,
   getCartUser,
   deleteUserCart,
 };
