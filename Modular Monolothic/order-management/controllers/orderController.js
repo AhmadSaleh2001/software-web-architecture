@@ -36,13 +36,16 @@ let confirmOrder = async (Req, Res) => {
       billingInfo: "sadasdsadasd",
       userId: currUser.id,
     });
+
+    let BatchInsert = []; // batch insert will reduce connections consume rather insert one by one
     for (const item of currCart) {
-      await orderProduct.create({
+      BatchInsert.push({
         orderId: currOrder.id,
         productId: item.productId,
         quantity: item.quantity,
       });
     }
+    await orderProduct.bulkCreate(BatchInsert);
 
     await shoppingCart.destroy({
       where: {

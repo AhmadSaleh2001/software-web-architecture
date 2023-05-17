@@ -45,13 +45,17 @@ let confirmOrder = async (Req, Res) => {
       userid: currUser.id,
     });
 
-    for (const item of currProducts) {
-      await orderProduct.create({
-        orderid: currOrder.id,
-        productid: item.id,
+    let BatchInsert = []; // batch insert will reduce connections consume rather insert one by one
+    for (const item of currCart) {
+      BatchInsert.push({
+        orderId: currOrder.id,
+        productId: item.productId,
         quantity: item.quantity,
       });
     }
+    await orderProduct.bulkCreate(BatchInsert);
+
+
     await myDeleteFetch(
       "http://localhost:1214/cart/api/userCart/" + Req.body.userid
     );
