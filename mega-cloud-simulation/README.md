@@ -1,6 +1,3 @@
-<iframe width="640" height="360" src="https://www.loom.com/embed/7f840f94ea0b44e2950d10a5ad127a1d" frameborder="0"
-        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 MEGA Cloud Simulation
 
 This project is a web application that simulates the functionality of the MEGA cloud storage service. Users can create an unlimited number of files and organize them within a hierarchical structure. The application also allows for uploading images to specific folders.
