@@ -1,5 +1,7 @@
 MEGA Cloud Simulation
 
+![Main Page - 27 May 2023](https://github.com/AhmadSaleh2001/software-web-architecture/assets/79485253/b5f8c019-7b8a-4004-bb92-034a3b23c961)
+
 This project is a web application that simulates the functionality of the MEGA cloud storage service. Users can create an unlimited number of files and organize them within a hierarchical structure. The application also allows for uploading images to specific folders.
 
 Features:
