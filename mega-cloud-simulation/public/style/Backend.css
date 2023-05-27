@@ -1,0 +1,27 @@
+.Content
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    gap:10px;
+}
+
+.Img
+{
+    width: 250px;
+}
+
+.pagination
+{
+    display: flex;
+    
+    text-align: center;
+    align-items: center;
+}
+
+.AddSection
+{
+    margin-top: 20px;
+    padding : 20px;
+    border : 1px solid rgb(207, 207, 207);
+}
