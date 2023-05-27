@@ -1,7 +1,5 @@
-<video width="320" height="240" controls>
-  <source src="https://www.loom.com/share/7f840f94ea0b44e2950d10a5ad127a1d" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<iframe width="640" height="360" src="https://www.loom.com/embed/7f840f94ea0b44e2950d10a5ad127a1d" frameborder="0"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 MEGA Cloud Simulation
 
