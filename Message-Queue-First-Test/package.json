@@ -1,0 +1,17 @@
+{
+  "name": "message-queue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqp": "^0.2.7",
+    "amqplib": "^0.10.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}
